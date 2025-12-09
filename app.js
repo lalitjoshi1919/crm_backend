@@ -59,6 +59,10 @@ app.use("/v1/user", userRouter);
 app.use("/v1/ticket", ticketRouter);
 app.use("/v1/tokens", tokensRouter);
 
+app.get("/", (req, res) => {
+  res.send("API is ready");
+});
+
 //Error handler
 const handleError = require("./src/utils/errorHandler");
 
